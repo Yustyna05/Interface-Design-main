@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+<body>
+    <header>
+        <div class="topnav">  
+            <ul>  
+                <li class="logo-item">
+                      
+                    <img src="icons/logo-icon.svg" alt="company logo"> 
+                </li>  
+                <li > 
+                    <a href="index.html">
+                        <div class = "icon-container">
+                            <img class="icon-image" src="icons/home-icon.png" alt="Home">  
+                        </div> 
+                    </a>
+                </li> 
+                <li >  
+                    <div class = "icon-container">
+                        <img  class="icon-image" src="icons/search-icon.png" alt="Search icon">  
+                    </div>
+                </li> 
+                <li>
+                    <div id = "search-container">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                </li>
+                <li > 
+                    <a href="shopping-busket.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/busket-icon.png" alt="Busket icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li > 
+                    <a href="wish_list.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/user-icon.png" alt="User icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li>
+                    <div id = "login-button-container">
+                        <button id = "login-button" type="button">Log in</button>
+                    </div>
+                    <div id = "account-button-container">
+                        <button id="account-button" type="button">Create account</button>
+                    </div>
+                </li>
+            </ul>  
+        </div>  
+    </header>
+
+
+    <main>
+        <svg class="flt_svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="flt_tag">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />    
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
+                    <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
+                </filter>
+            </defs>
+        </svg>
+        <div class="main-container">
+            <div class = "filters-container">
+                <div>
+                    <h2>Filters</h2>
+        <!-- Skin Type -->
+        <div class="filter-block">
+            <h3>Skin Type</h3>
+            <label><input type="checkbox" name="skin" value="normal"> Normal</label>
+            <label><input type="checkbox" name="skin" value="dry"> Dry</label>
+            <label><input type="checkbox" name="skin" value="oily"> Oily</label>
+            <label><input type="checkbox" name="skin" value="combination"> Combination</label>
+        </div>
+        <!-- Price Range -->
+        <div class="filter-block">
+            <h3>Price Range</h3>
+            <div class="price-range-container">
+                <span id="min-price"></span> - <span id="max-price"></span>
+                <input type="range" min="0" max="1000" value="0" class="slider" id="min-price-slider">
+                <input type="range" min="0" max="1000" value="1000" class="slider" id="max-price-slider">
+            </div>
+        </div>
+        <!-- Brand -->
+        <div class="filter-block">
+            <h3>Brand</h3>
+            <select>
+                <option value="chanel">CHANEL</option>
+                <option value="clarins">CLARINS</option>
+                <option value="dior">DIOR</option>
+                <option value="kerastase">KERASTASE</option>
+                <option value="rituals">RITUALS</option>
+                <option value="shiseido">SHISEIDO</option>
+            </select>
+        </div>
+        <div class="filter-block">
+            <h3>Sex</h3>
+            <select>
+                <option value="chanel">MALE</option>
+                <option value="clarins">FEMALE</option>
+            </select>
+        </div>
+        <!-- Rating -->
+        <div class="filter-block">
+            <h3>Rating</h3>
+            <div class="ratings">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+        </div>
+                </div>
+            </div>
+            <div class = "products-container">
+                <div class="categories">
+                    <nav>
+                        <menu>
+                            <!-- Skincare Category -->
+                            <menuitem id="skincare">
+                                <a>Skincare</a>
+                                <menu>
+                                    <menuitem><a>Moisturizers</a></menuitem>
+                                    <menuitem>
+                                        <a>Cleansers</a>
+                                        <menu>
+                                            <menuitem><a>Face Wash</a></menuitem>
+                                            <menuitem><a>Makeup Remover</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                    <menuitem><a>Toners</a></menuitem>
+                                    <menuitem>
+                                        <a>Treatments</a>
+                                        <menu>
+                                            <menuitem><a>Serums</a></menuitem>
+                                            <menuitem><a>Face Masks</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                </menu>
+                            </menuitem>
+
+                            <!-- Makeup Category -->
+                            <menuitem id="makeup">
+                                <a>Makeup</a>
+                                <menu>
+                                    <menuitem><a>Face</a></menuitem>
+                                    <menuitem>
+                                        <a>Eyes</a>
+                                        <menu>
+                                            <menuitem><a>Eyeshadow</a></menuitem>
+                                            <menuitem><a>Mascara</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                    <menuitem><a>Lips</a></menuitem>
+                                    <menuitem>
+                                        <a>Tools</a>
+                                        <menu>
+                                            <menuitem><a>Brushes</a></menuitem>
+                                            <menuitem><a>Sponges</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                </menu>
+                            </menuitem>
+
+                            <!-- Haircare Category -->
+                            <menuitem id="haircare">
+                                <a>Haircare</a>
+                                <menu>
+                                    <menuitem><a>Shampoo</a></menuitem>
+                                    <menuitem>
+                                        <a>Conditioner</a>
+                                        <menu>
+                                            <menuitem><a>Moisturizing</a></menuitem>
+                                            <menuitem><a>Volumizing</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                    <menuitem><a>Treatments</a></menuitem>
+                                    <menuitem>
+                                        <a>Styling</a>
+                                        <menu>
+                                            <menuitem><a>Hairspray</a></menuitem>
+                                            <menuitem><a>Gels</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                </menu>
+                            </menuitem>
+
+                            <!-- Bodycare Category -->
+                            <menuitem id="bodycare">
+                                <a>Fragrance</a>
+                                <menu>
+                                    <menuitem><a>Body Wash</a></menuitem>
+                                    <menuitem>
+                                        <a>Body Lotion</a>
+                                        <menu>
+                                            <menuitem><a>Moisturizing</a></menuitem>
+                                            <menuitem><a>Firming</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                    <menuitem><a>Body Scrubs</a></menuitem>
+                                    <menuitem>
+                                        <a>Sunscreen</a>
+                                        <menu>
+                                            <menuitem><a>SPF 30</a></menuitem>
+                                            <menuitem><a>SPF 50</a></menuitem>
+                                        </menu>
+                                    </menuitem>
+                                </menu>
+                            </menuitem>
+                        </menu>
+                    </nav>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <a href="customer-support.html">
+            <button class="customer-support-button">
+                <img src="icons/faq.png" alt="customer service icon">
+                
+            </button>
+        </a>
+
+    </footer>
+    <div class="login-box" id="login-box">
+        <h2>Login</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <a href="#" id="submit-login">Submit</a>
+        </form>
+    </div>
+
+
+    <div class="account-box" id="account-box">
+        <h2>Create Account</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="name" required="">
+                <label>Name and Surname</label>
+            </div>
+            <div class="user-box">
+                <input type="email" name="email" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="age" required="">
+                <label>Age</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="username" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required="">
+                <label>Password</label>
+            </div>
+            <a href="#" id="submit-account">Submit</a>
+        </form>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

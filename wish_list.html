@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wish List</title>
+    <link rel="stylesheet" type="text/css" href="wish_list.css">
+
+</head>
+<body>
+<header>
+    <div class="topnav">
+        <ul>
+            <li class="logo-item">
+
+                <img src="icons/logo-icon.svg" alt="company logo">
+            </li>
+            <li >
+                <a href="index.html">
+                    <div class = "icon-container">
+                        <img class="icon-image" src="icons/home-icon.png" alt="Home">
+                    </div>
+                </a>
+            </li>
+            <li >
+                <div class = "icon-container">
+                    <img class="icon-image" src="icons/search-icon.png" alt="Search icon">
+                </div>
+            </li>
+            <li>
+                <div id = "search-container">
+                    <input type="text" placeholder="Search..">
+                </div>
+            </li>
+            <li >
+                <a href="shopping-busket.html">
+                    <div class = "icon-container">
+                        <img class="icon-image" src="icons/busket-icon.png" alt="Busket icon">
+                    </div>
+                </a>
+
+            </li>
+            <li >
+                <a href="wish_list.html">
+                    <div class = "icon-container">
+                        <img class="icon-image" src="icons/user-icon.png" alt="User icon">
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <div id = "login-button-container">
+                    <button id = "login-button" type="button">Log in</button>
+                </div>
+                <div id = "account-button-container">
+                    <button id="account-button" type="button">Create account</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container">
+
+    
+
+    <!-- New row with three columns -->
+    
+        <div class="row">
+            <div class="col-12 col-md-10 hh-grayBox pt45 pb20">
+                <div class="row justify-content-between info-header">
+                    <h2>Order Tracking - VFGH768897TG</h2>
+                </div>
+                <div class="row justify-content-between info-row">
+                    <div class="col-12 col-md-4">
+                        <p class="tracking-text">Shipped wia</p>
+                        <h4 class="tracking-text">UPS</h4>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="tracking-text">Status</p>
+                        <h4 class="tracking-text">Shipped</h4>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="tracking-text">Expected</p>
+                        <h4 class="tracking-text">Friday, September 23</h4>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="order-tracking completed">
+                        <span class="is-complete"></span>
+                        <p>Ordered<br><span>Mon, June 24</span></p>
+                    </div>
+                    <div class="order-tracking completed shipping">
+                        <span class="is-complete"></span>
+                        <p>Shipped<br><span>Tue, June 25</span></p>
+                    </div>
+                    <div class="order-tracking">
+                        <span class="is-complete"></span>
+                        <p>Delivered<br><span>Fri, June 28</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wishlist-header">
+    <img src="images/heart1.png" alt="Heart Icon">
+    <h1 class="wishlist-title">My Wishlist</h1>
+</div>
+<div class="wishlist-container"> <!-- Доданий контейнер -->
+    <div class="wishlist-items">
+        <div class="wishlist-item">
+            <div class="product-row">
+                <img src="images/chanel5.png" alt="Product 1">
+                <div class="wishlist-details">
+                    <h2 class="product-name">Chanel Chance Perfume</h2>
+                    <p class="unit-price">$95.00</p>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wishlist-items">
+        <div class="wishlist-item">
+            <div class="product-row">
+                <img src="images/fenty1.png" alt="Product 1">
+                <div class="wishlist-details">
+                    <h2 class="product-name">Fenty Beauty Lip Gloss</h2>
+                    <p class="unit-price">$20.00</p>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wishlist-items">
+        <div class="wishlist-item">
+            <div class="product-row">
+                <img src="images/dior.png" alt="Product 1">
+                <div class="wishlist-details">
+                    <h2 class="product-name">Dior Highlighter</h2>
+                    <p class="unit-price">$25.00</p>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <a href="customer-support.html">
+        <button class="customer-support-button">
+            <img src="icons/faq.png" alt="customer service icon">
+
+        </button>
+    </a>
+
+</footer>
+<div class="login-box" id="login-box">
+    <h2>Login</h2>
+    <form>
+        <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="">
+            <label>Password</label>
+        </div>
+        <a href="#" id="submit-login">Submit</a>
+    </form>
+</div>
+
+<div class="account-box" id="account-box">
+    <h2>Create Account</h2>
+    <form>
+        <div class="user-box">
+            <input type="text" name="name" required="">
+            <label>Name and Surname</label>
+        </div>
+        <div class="user-box">
+            <input type="email" name="email" required="">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="number" name="age" required="">
+            <label>Age</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+        </div>
+        <a href="#" id="submit-account">Submit</a>
+    </form>
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
